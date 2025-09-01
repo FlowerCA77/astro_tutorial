@@ -1,5 +1,7 @@
 ---
-import '../styles/global.css';
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
 
 const pageTitle = "关于我";
 
@@ -29,7 +31,7 @@ const fontWeight = "bold";
 const textCase = "uppercase";
 ---
 
-<html lang="en">
+<html lang="zh-CN">
     <head>
         <meta charset="utf-8" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -49,9 +51,7 @@ const textCase = "uppercase";
         </style>
     </head>
     <body>
-        <a href="/">首页</a>
-        <a href="/about/">关于</a>
-        <a href="/blog/">博客</a>
+        <Header />
         <h1>{pageTitle}</h1>
         <h2>……和我的新 Astro 网站！</h2>
 
@@ -93,5 +93,9 @@ const textCase = "uppercase";
                 <p>我的目标不是 3 天。</p>
             )
         }
+        <Footer />
+		<script>
+			import "../scripts/menu.js";
+		</script>
     </body>
 </html>
